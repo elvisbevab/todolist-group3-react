@@ -1,8 +1,11 @@
-export default function MainList(){
+export default function MainList({taskList}){
+  console.log(`task call ${taskList}`)
   return(
     <div className="mainList">
       <ul>
-        <li>sadfhksdfkjsdf</li>
+        {taskList.map((task)=>(
+          <li key={task}>{task}</li>
+        ))}
       </ul>
     </div>
   )
