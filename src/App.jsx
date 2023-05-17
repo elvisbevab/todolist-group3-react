@@ -21,12 +21,15 @@ function App() {
     // console.log(taskList);
   }
 
-  function deleteTask(id) {}
+  function deleteTask(id) {
+    taskHandler.removeTask(id);
+    setTaskList(taskHandler.getAllTasks);
+  }
   return (
     <>
       <div>
         <InputForm getTask={getDataFromInput} />
-        <MainList taskList={taskList} />
+        <MainList taskList={taskList} deleteFunc={deleteTask} />
       </div>
     </>
   );
