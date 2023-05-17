@@ -11,6 +11,11 @@ export default function InputForm({getTask}) {
   }
 
   return (
+
+
+
+
+
     <div className='inputForm'>
       <form action=''>
         <input placeholder='New Task'
@@ -20,5 +25,15 @@ export default function InputForm({getTask}) {
         <button onClick={handleClick}>Add Task</button>
       </form>
     </div>
+
+
+
+
+
+
+
   );
+
+
+
 }
