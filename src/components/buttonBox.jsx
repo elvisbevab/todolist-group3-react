@@ -1,14 +1,12 @@
-export default function ButtonBox() {
+import 'bootstrap-icons/font/bootstrap-icons.css';
+export default function ButtonBox({ id }) {
   return (
     <div>
-      <button class='but pencil' value='${list[i].id}'>
+      <button class='but pencil'>
         <i class='bi bi-pencil'></i>
       </button>
-      <button class='but check' onclick="toggleDone('${list[i].id}')">
-        <i class='fa fa-check'></i>
-      </button>
-      <button class='but trash' onclick="deleteTask('${list[i].id}')">
-        <i class='fa fa-trash'></i>
+      <button class='but trash'>
+        <i class='bi bi-trash'></i>
       </button>
     </div>
   );

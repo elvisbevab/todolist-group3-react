@@ -20,6 +20,8 @@ function App() {
     setTaskList(taskHandler.getAllTasks);
     // console.log(taskList);
   }
+
+  function deleteTask(id) {}
   return (
     <>
       <div>
