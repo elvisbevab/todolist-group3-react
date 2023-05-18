@@ -11,5 +11,9 @@ export default class Project {
   get getColor() {
     return this.color
   }
+
+  set setColor(color) {
+    this.color = color;
+  }
 }
 
