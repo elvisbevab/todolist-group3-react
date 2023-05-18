@@ -4,6 +4,7 @@ export default class TaskHandler {
   constructor() {
     this.tasks = {}
     this.visibleTasks = []
+    this.projects = []
   }
   get getAllTasks() {
     //return alle Tasks
@@ -31,5 +32,14 @@ export default class TaskHandler {
     console.log(this.tasks)
     delete this.tasks[id];
     console.log(this.tasks)
+  }
+
+
+  getAllProjectNames() {
+    return this.projects
+  }
+
+  getPrjectByTitle(title) {
+    return this.projects.filter((project) => project.title === title)
   }
 }
