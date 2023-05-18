@@ -5,6 +5,7 @@ export default class TaskHandler {
     this.tasks = {}
     this.visibleTasks = []
     this.projects = []
+    this.priorities = ["none", "low", "medium", "high"]
   }
   get getAllTasks() {
     //return alle Tasks

@@ -3,6 +3,7 @@ export default class Task {
     this.id = id;
     this.content = content;
     this.isComplete = false;
+    this.priority = "none"
   }
 
   get getId() {
@@ -16,9 +17,15 @@ export default class Task {
   get getIsComplete() {
     return this.isComplete;
   }
+  get getPriority() {
+    return this.priority
+  }
 
   set setContent(content) {
     this.content = content;
+  }
+  set setPriority(priority) {
+    this.priority = priority
   }
   toggleComplete() {
     this.isComplete = !this.isComplete;
