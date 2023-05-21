@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
+// import { 여기에,로 연달아서 아이템가져오기 ex) Button,Navbar } from 'react-bootstrap';
+
+
 import InputForm from './components/form';
 import MainList from './components/main';
 
@@ -7,6 +10,8 @@ function App() {
   const [count, setCount] = useState(0);
   const [taskName, setTaskName] = useState();
   const [taskList, setTaskList] = useState([]);
+
+
 
   function getDataFromInput(input) {
     setTaskName(input);
@@ -28,7 +33,6 @@ function App() {
     <>
       <div>
         <InputForm getTask={getDataFromInput} />
-        <h1>{taskName}</h1>
         <MainList taskList={taskList} deleteTask={deleteTask} editTask={editTask} />
       </div>
     </>

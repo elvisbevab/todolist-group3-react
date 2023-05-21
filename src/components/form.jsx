@@ -1,5 +1,6 @@
 import { useState } from 'react'
 
+
 export default function InputForm({getTask}) {
   const [taskName, setTaskName] = useState();
   
@@ -13,16 +14,13 @@ export default function InputForm({getTask}) {
   return (
 
 
-
-
-
-    <div className='inputForm'>
+    <div className='inputForm'>      
       <form action=''>
-        <input placeholder='New Task'
+        <input placeholder='Please add you plan'
           onChange={(e) => {
               setTaskName(e.target.value);
-            }}></input>
-        <button onClick={handleClick}>Add Task</button>
+            }} className='placeholderInput'></input>
+        <button onClick={handleClick}>➕</button>  {/*여기사용한 onClick은 props를 위한 작명이지 함수가 아님*/}
       </form>
     </div>
 
