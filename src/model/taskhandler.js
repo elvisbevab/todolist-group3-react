@@ -22,8 +22,8 @@ export default class TaskHandler {
     return "_" + Math.random().toString(36).substring(2, 9);
   }
 
-  createTask(content) {
-    const newTask = new Task(this.randomIdGenerator(), content)
+  createTask(content, prio) {
+    const newTask = new Task(this.randomIdGenerator(), content, prio)
     this.tasks[newTask.getId] = newTask;
     console.log(newTask);
     console.log(this.tasks);

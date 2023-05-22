@@ -1,7 +1,10 @@
 import { useState } from 'react';
-import './form.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
-export default function InputForm({ getTask }) {
+import './css/form.css';
+import PriorityButtons from './priorityButtons';
+
+export default function InputForm({ getTask, prio, setPrio }) {
   const [taskName, setTaskName] = useState();
 
   function handleClick(event) {
@@ -19,6 +22,8 @@ export default function InputForm({ getTask }) {
             setTaskName(e.target.value);
           }}
         ></input>
+        <PriorityButtons prio={prio} setPrio={setPrio} />
+
         <button onClick={handleClick}>Add Task</button>
       </form>
     </div>

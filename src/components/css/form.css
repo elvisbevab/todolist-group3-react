@@ -1,0 +1,31 @@
+.inputForm {
+  background-color: burlywood;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.flag-white {
+  color: white;
+}
+
+.flag-red {
+  color: rgb(255, 0, 0);
+}
+
+.flag-yellow {
+  color: yellow
+}
+
+.flag-green {
+  color: green;
+}
+
+.prio-group button:active {
+  /* background-color: transparent; */
+  /* background-color: aqua; */
+}
+
+.active {
+  background-color: aqua;
+}

@@ -1,5 +1,5 @@
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import './buttonBox.css';
+import './css/buttonBox.css';
 export default function ButtonBox({ id, deleteFunc }) {
   return (
     <div className='buttonBox'>

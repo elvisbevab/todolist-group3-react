@@ -10,9 +10,11 @@ const taskHandler = new TaskHandler();
 
 function App() {
   const [taskList, setTaskList] = useState([]);
+  const [prio, setPrio] = useState('none');
+
   function getDataFromInput(input) {
     // console.log(`Input given to function = ${input}`)
-    taskHandler.createTask(input);
+    taskHandler.createTask(input, prio);
     // console.log(taskHandler.getAllTasks);
     // console.log(`Taskname = ${taskName}`)
     // console.log(taskHandler.getAllTasks);
@@ -27,11 +29,12 @@ function App() {
   }
   function checkTask(id) {
     taskHandler.checkTask(id);
+    setTaskList(taskHandler.getAllTasks);
   }
   return (
     <>
       <div className='mainSection'>
-        <InputForm getTask={getDataFromInput} />
+        <InputForm getTask={getDataFromInput} prio={prio} setPrio={setPrio} />
         <MainList
           taskList={taskList}
           deleteFunc={deleteTask}

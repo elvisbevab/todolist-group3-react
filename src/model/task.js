@@ -1,9 +1,9 @@
 export default class Task {
-  constructor(id, content) {
+  constructor(id, content, prio) {
     this.id = id;
     this.content = content;
     this.isComplete = false;
-    this.priority = "none"
+    this.priority = prio
   }
 
   get getId() {
