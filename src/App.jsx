@@ -27,7 +27,7 @@ function App() {
   }
   return (
     <>
-      <div>
+      <div className='mainSection'>
         <InputForm getTask={getDataFromInput} />
         <MainList taskList={taskList} deleteFunc={deleteTask} />
       </div>
