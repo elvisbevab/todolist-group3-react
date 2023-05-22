@@ -32,9 +32,24 @@ function App() {
     taskHandler.checkTask(id);
     setTaskList(taskHandler.getAllTasks);
   }
+  function selectAll() {
+    setTaskList(taskHandler.getAllTasks);
+  }
+  function selectStatus(status) {
+    taskHandler.filterStatus(status);
+    setTaskList(taskHandler.getVisibleTasks);
+  }
+  function selectPrio(prio) {
+    taskHandler.filterPrio(prio);
+    setTaskList(taskHandler.getVisibleTasks);
+  }
   return (
     <div className='root'>
-      <SideBar />
+      <SideBar
+        selectAll={selectAll}
+        selectStatus={selectStatus}
+        selectPrio={selectPrio}
+      />
       <div className='mainSection'>
         <InputForm getTask={getDataFromInput} prio={prio} setPrio={setPrio} />
         <MainList

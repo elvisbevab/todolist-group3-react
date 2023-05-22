@@ -49,4 +49,36 @@ export default class TaskHandler {
   getProjectByTitle(title) {
     return this.projects.filter((project) => project.title === title)
   }
+
+
+  filterStatus(isComplete) {
+    isComplete = (isComplete === 'true')
+    // console.log("callFilter")
+    // console.log(isComplete)
+    function check(task) {
+      // console.log('bla')
+      // console.log(typeof task.getIsComplete)
+      // console.log(typeof isComplete)
+      // console.log('blub')
+      if (task.getIsComplete == isComplete) {
+        console.log('true hier')
+        return true
+      } else {
+        console.log('false hier')
+        return false
+      }
+
+    }
+    const toFilter = Object.values(this.tasks);
+    // console.log(toFilter)
+    // console.log(toFilter.filter(check))
+    this.visibleTasks = toFilter.filter(check)
+
+  }
+  filterPrio(prio) {
+    const toFilter = Object.values(this.tasks);
+    this.visibleTasks = toFilter.filter((task) => task.getPriority === prio)
+  }
+
+
 }
