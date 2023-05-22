@@ -5,6 +5,7 @@ import './App.css';
 import InputForm from './components/form';
 import MainList from './components/main';
 import TaskHandler from './model/taskhandler';
+import SideBar from './components/sideBar';
 
 const taskHandler = new TaskHandler();
 
@@ -32,7 +33,8 @@ function App() {
     setTaskList(taskHandler.getAllTasks);
   }
   return (
-    <>
+    <div className='root'>
+      <SideBar />
       <div className='mainSection'>
         <InputForm getTask={getDataFromInput} prio={prio} setPrio={setPrio} />
         <MainList
@@ -41,7 +43,7 @@ function App() {
           checkTask={checkTask}
         />
       </div>
-    </>
+    </div>
   );
 }
 

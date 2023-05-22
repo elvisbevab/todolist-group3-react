@@ -5,19 +5,19 @@
   justify-content: space-between;
 }
 
-.flag-white {
+.flag-white i {
   color: white;
 }
 
-.flag-red {
+.flag-red i {
   color: rgb(255, 0, 0);
 }
 
-.flag-yellow {
+.flag-yellow i {
   color: yellow
 }
 
-.flag-green {
+.flag-green i {
   color: green;
 }
 

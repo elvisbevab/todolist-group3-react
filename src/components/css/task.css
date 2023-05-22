@@ -16,3 +16,19 @@
   background-color: red;
   text-decoration-line: line-through;
 }
+
+.flag-white {
+  color: white;
+}
+
+.flag-red {
+  color: rgb(255, 0, 0);
+}
+
+.flag-yellow {
+  color: yellow
+}
+
+.flag-green {
+  color: green;
+}
