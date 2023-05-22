@@ -35,12 +35,18 @@ export default class TaskHandler {
     console.log(this.tasks)
   }
 
+  checkTask(id) {
+    console.log(`check task with id ${id}`)
+    this.tasks[id].toggleComplete()
+    console.log(this.tasks[id])
+  }
+
 
   getAllProjectNames() {
     return this.projects
   }
 
-  getPrjectByTitle(title) {
+  getProjectByTitle(title) {
     return this.projects.filter((project) => project.title === title)
   }
 }

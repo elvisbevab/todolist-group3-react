@@ -1,6 +1,13 @@
 .task {
-  background-color: aqua;
+  /* background-color: aqua; */
   display: flex;
   justify-content: space-around;
   border: solid 1px;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+.task input {
+  font-size: 1rem;
+  padding: 0.5rem;
 }

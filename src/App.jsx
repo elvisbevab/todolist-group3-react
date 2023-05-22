@@ -25,11 +25,18 @@ function App() {
     taskHandler.removeTask(id);
     setTaskList(taskHandler.getAllTasks);
   }
+  function checkTask(id) {
+    taskHandler.checkTask(id);
+  }
   return (
     <>
       <div className='mainSection'>
         <InputForm getTask={getDataFromInput} />
-        <MainList taskList={taskList} deleteFunc={deleteTask} />
+        <MainList
+          taskList={taskList}
+          deleteFunc={deleteTask}
+          checkTask={checkTask}
+        />
       </div>
     </>
   );
